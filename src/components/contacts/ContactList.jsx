@@ -18,6 +18,7 @@ const getFiltredContacts = (contacts, filter) => {
 
 export const ContactList = () => {
   const contacts = useSelector(getContacts)
+
   const filter = useSelector(getStatusFilter);
   const filtredContacts = getFiltredContacts(contacts, filter)
   return (

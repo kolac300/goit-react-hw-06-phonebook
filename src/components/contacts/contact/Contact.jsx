@@ -2,8 +2,8 @@ import { Li } from './Contact.styled';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { deleteContact } from 'Redux/actions';
 import { toast } from 'react-hot-toast';
+import { deleteContact } from 'Redux/contactsSlice';
 
 export const Contact = ({ name, number, id }) => {
   const dispatch = useDispatch();

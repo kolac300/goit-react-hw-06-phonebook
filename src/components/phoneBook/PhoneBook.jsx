@@ -3,9 +3,9 @@ import { Formik, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'Redux/actions';
 import { toast } from 'react-hot-toast';
 import { getContacts } from 'Redux/selector';
+import { addContact } from 'Redux/contactsSlice';
 
 const phoneRegexp = /^\+380\d{3}\d{2}\d{2}\d{2}$/;
 const scheme = yup.object().shape({
