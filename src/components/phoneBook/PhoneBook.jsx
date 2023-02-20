@@ -24,19 +24,12 @@ const initialValues = {
 export const PhoneBook = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(getContacts)
-
-  useEffect(() => {
-    localStorage.setItem('contacts', JSON.stringify(contacts));
-  }, [contacts])
-
-
   const isAlredyExistInContact = (name) => {
     return contacts
       .some(contact =>
         contact.name.toLowerCase()
         === name.toLowerCase())
   }
-
   const onSubmit = (value, { resetForm }) => {
     const { name, number } = value;
     if (isAlredyExistInContact(name))

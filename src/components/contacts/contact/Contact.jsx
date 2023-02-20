@@ -7,7 +7,6 @@ import { deleteContact } from 'Redux/contactsSlice';
 
 export const Contact = ({ name, number, id }) => {
   const dispatch = useDispatch();
-
   const handleDelete = () => {
     dispatch(deleteContact(id))
     toast.success('Successfully deleted!');
@@ -20,7 +19,6 @@ export const Contact = ({ name, number, id }) => {
     </Li>
   );
 };
-
 Contact.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,

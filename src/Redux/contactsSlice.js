@@ -1,11 +1,8 @@
 import { createSlice, nanoid } from '@reduxjs/toolkit';
-import { ititialContacts } from 'FakeAPI';
-
-const contactsInitialState = ititialContacts();
 
 const contactsSlice = createSlice({
   name: 'contacts',
-  initialState: contactsInitialState,
+  initialState: [],
   reducers: {
     addContact: {
       reducer(state, action) {
