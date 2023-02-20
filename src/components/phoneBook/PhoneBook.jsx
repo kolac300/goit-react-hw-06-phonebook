@@ -1,7 +1,6 @@
 import { Label, StyledForm, InvalidValue } from './PhoneBook.styled';
 import { Formik, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
-import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-hot-toast';
 import { getContacts } from 'Redux/selector';
